@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32721.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelApp.Api", "HotelApp.Api\HotelApp.Api.csproj", "{4D717E25-8133-4B56-A603-75D3E95170D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelApp.Data", "HotelApp.Data\HotelApp.Data.csproj", "{67260079-34D5-4B0A-B140-A09FFC4E5437}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelApp.Core", "HotelApp.Core\HotelApp.Core.csproj", "{4AE82CF9-EAAA-41A7-9D30-0E3927D3705C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelApp.Jobs", "HotelApp.Jobs\HotelApp.Jobs.csproj", "{2A80F362-E781-432A-BD13-E4F42AA91BF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker-Compose", "Docker-Compose", "{0EB49E2D-1280-4C3B-8F11-B9C739893CC5}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{CABB08CC-EA14-4724-A070-303532CC811B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Documents\angular\Hotel\hotel\angular.Dockerfile = ..\..\..\Documents\angular\Hotel\hotel\angular.Dockerfile
+		dotnet.Dockerfile = dotnet.Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{1229EC0A-605F-49BE-927D-D5A236162489}"
+	ProjectSection(SolutionItems) = preProject
+		hotel-depl.yaml = hotel-depl.yaml
+		hotel-ingress.yaml = hotel-ingress.yaml
+		hotel-np.yaml = hotel-np.yaml
+		hotelapi-depl.yaml = hotelapi-depl.yaml
+		postgres-depl.yaml = postgres-depl.yaml
+		postgres-secr.yaml = postgres-secr.yaml
+		redis-depl.yaml = redis-depl.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D717E25-8133-4B56-A603-75D3E95170D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D717E25-8133-4B56-A603-75D3E95170D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D717E25-8133-4B56-A603-75D3E95170D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D717E25-8133-4B56-A603-75D3E95170D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67260079-34D5-4B0A-B140-A09FFC4E5437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67260079-34D5-4B0A-B140-A09FFC4E5437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67260079-34D5-4B0A-B140-A09FFC4E5437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67260079-34D5-4B0A-B140-A09FFC4E5437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE82CF9-EAAA-41A7-9D30-0E3927D3705C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE82CF9-EAAA-41A7-9D30-0E3927D3705C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE82CF9-EAAA-41A7-9D30-0E3927D3705C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE82CF9-EAAA-41A7-9D30-0E3927D3705C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A80F362-E781-432A-BD13-E4F42AA91BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A80F362-E781-432A-BD13-E4F42AA91BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A80F362-E781-432A-BD13-E4F42AA91BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A80F362-E781-432A-BD13-E4F42AA91BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {840610C7-5698-4443-B5BE-19BBECA1A8BE}
+	EndGlobalSection
+EndGlobal

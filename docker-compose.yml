@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  hotel-db:
+    image: postgres:latest
+    container_name: hotel-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=gfhfpbn0101
+      - POSTGRES_DB=hoteldb
+    ports:
+      - 5432:5432
+    networks:
+      - hotel-network
+
+  hotel-api:
+    image: denis227/hotelapi:latest
+    ports:
+      - 5018:80
+    depends_on:
+      - hotel-db
+    environment:
+      - CONNECTIONSTRINGS__DEFAULT=User ID=postgres;Password=gfhfpbn0101;Host=hotel-db;Port=5432;Database=hoteldb
+    networks:
+      - hotel-network
+
+networks:
+  hotel-network:
+    driver: bridge

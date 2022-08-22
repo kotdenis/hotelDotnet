@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotelapi-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotelapi
+  template:
+    metadata:
+      labels:
+        app: hotelapi
+    spec:
+      containers:
+      - name: hotelapi
+        image: denis227/hotelapi:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hotelapi-srv
+spec:
+  type: LoadBalancer
+  selector:
+    app: hotelapi
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hotel-np-srv
+spec:
+  selector:
+    app: hotelapi
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+

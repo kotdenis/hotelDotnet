@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hotel-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+    validate.nginx.ingress.kubernetes.io: 'true'
+  labels:
+    name: hotel-ingress
+spec:
+  rules:
+  - host: acme.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: hotelapi-srv
+            port:
+              number: 80
+        pathType: Prefix
+        path: /api/(.*)
+      - backend:
+          service:
+            name: hotel-srv
+            port:
+              number: 80
+        pathType: Prefix
+        path: /

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-secr
+type: Opaque
+data:
+  postgres-root-password: Z2ZoZnBibjAxMDE=
+  postgres-root-username: cG9zdGdyZXM=
